@@ -92,5 +92,7 @@ make
 ```
 
 Special thanks to
+
 https://marcocetica.com/posts/buildroot-tutorial/
+
 https://agentoss.wordpress.com/2011/03/02/how-to-build-a-tiny-linux-mp3-player-system-using-buildroot/
