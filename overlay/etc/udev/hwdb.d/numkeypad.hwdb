@@ -1,4 +1,4 @@
-evdev:name:HID 13ba*
+evdev:input:b0003v13BAp0001*
  KEYBOARD_KEY_7005d=s
  KEYBOARD_KEY_7005c=d
  KEYBOARD_KEY_7005e=f
