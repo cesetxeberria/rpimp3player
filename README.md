@@ -14,10 +14,12 @@ Select configuration options.
 ```
 Toolchain -- > enable WCHAR support
 System configuration --> root filesystem overlay directories (overlay)
+System configuration --> /dev management (Dynamic using devtmpfs + eudev)
 Target packages --> audio and video --> alsa-utils
 Target packages --> audio and video --> mpg123
 Target packages --> filesystem and flash utilities --> exfatprogs
 Target packages --> filesystem and flash utilities --> ntfs-3g
+Target packages --> Hardware handling --> enable hwdb installation
 Filesystem images --> initial RAM filesystem linked into linux kernel
 ```
 
