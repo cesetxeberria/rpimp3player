@@ -54,8 +54,10 @@ Soundcard is disabled by default so we have to enable it. Add a line at the end 
 ```
 ...
 dtparam=audio=on
+hdmi_force_hotplug=1
 ...
 ```
+Second line forces video output through hdmi. Without that option, if there is no hdmi screen attached the board outputs audio AND VIDEO through jack (so we can use 3.5mm auxiliary to composite cables).
 
 I want to run the system in ram, so uncomment this line too.
 >board/raspberrypi/config_default.txt
@@ -98,3 +100,7 @@ Special thanks to
 https://marcocetica.com/posts/buildroot-tutorial/
 
 https://agentoss.wordpress.com/2011/03/02/how-to-build-a-tiny-linux-mp3-player-system-using-buildroot/
+
+https://www.raspberrypi.com/news/latest-raspberry-pi-os-update-may-2020/
+
+
