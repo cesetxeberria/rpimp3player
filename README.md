@@ -128,3 +128,15 @@ Finally got the key codes with evtest
 Event: time 1651002716.523273, type 4 (EV_MSC), code 4 (MSC_SCAN), value 7005d
 Event: time 1651002716.523273, type 1 (EV_KEY), code 76 (KEY_KP5), value 1
 ```
+And wrote the configuration file
+>/etc/udev/hwdb.d/numkeypad.hwdb 
+```
+evdev:input:b0003v13BAp0001*
+KEYBOARD_KEY_7005d=s
+KEYBOARD_KEY_7005c=d
+KEYBOARD_KEY_7005e=f
+KEYBOARD_KEY_70060=leftbrace
+KEYBOARD_KEY_7005a=rightbrace
+KEYBOARD_KEY_70054=comma
+KEYBOARD_KEY_70055=dot
+```
