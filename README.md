@@ -104,3 +104,27 @@ https://agentoss.wordpress.com/2011/03/02/how-to-build-a-tiny-linux-mp3-player-s
 https://www.raspberrypi.com/news/latest-raspberry-pi-os-update-may-2020/
 
 
+# extra: control it with a keypad
+
+I wanted to control the mp3 player but didn't want to use a full keyboard so plugged this keypad and configured it
+
+https://www.amazon.es/gp/product/B00VQ3DR1E
+
+First I found the vendor's code with lsusb (13ba)
+
+>lsusb
+```
+Bus 001 Device 014: ID 13ba:0001 PCPlay Konig Electronic CMP-KEYPAD12 Numeric Keypad
+```
+
+Then I found it's modalias
+>find /sys -name *modalias | xargs grep -i 13ba
+```
+/sys/devices/pci0000:00/0000:00:1a.0/usb1/1-1/1-1.2/1-1.2:1.0/0003:13BA:0001.0004/input/input22/modalias:input:b0003v13BAp0001e0110-e0,1,4,11,14,k71,72,73,74,75,77,79,7A,7B,7C,7D,7E,7F,80,81,82,83,84,85,86,87,88,89,8A,B7,B8,B9,BA,BB,BC,BD,BE,BF,C0,C1,C2,F0,ram4,l0,1,2,sfw
+```
+Finally got the key codes with evtest
+>evtest
+```
+Event: time 1651002716.523273, type 4 (EV_MSC), code 4 (MSC_SCAN), value 7005d
+Event: time 1651002716.523273, type 1 (EV_KEY), code 76 (KEY_KP5), value 1
+```
