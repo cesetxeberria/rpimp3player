@@ -127,6 +127,7 @@ Finally got the key codes with evtest
 ```
 Event: time 1651002716.523273, type 4 (EV_MSC), code 4 (MSC_SCAN), value 7005d
 Event: time 1651002716.523273, type 1 (EV_KEY), code 76 (KEY_KP5), value 1
+...
 ```
 And wrote the configuration file
 >/etc/udev/hwdb.d/numkeypad.hwdb 
@@ -140,3 +141,8 @@ KEYBOARD_KEY_7005a=rightbrace
 KEYBOARD_KEY_70054=comma
 KEYBOARD_KEY_70055=dot
 ```
+Thanks to
+
+https://askubuntu.com/questions/742946/how-to-find-the-hwdb-header-of-a-general-input-device
+
+https://www.rigacci.org/wiki/doku.php/doc/appunti/linux/sa/remap_keyboard_keys
